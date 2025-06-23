@@ -5,9 +5,10 @@ plugins {
 }
 
 android {
-    namespace = "com.devbymehar.healofy_assignment"
+    namespace = "com.example.healofy_assignment"
     compileSdk = flutter.compileSdkVersion
-    ndkVersion = flutter.ndkVersion
+    ndkVersion = "27.0.12077973"
+    // ndkVersion = flutter.ndkVersion
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
@@ -19,7 +20,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.devbymehar.healofy_assignment"
+        applicationId = "com.example.healofy_assignment"
         minSdk = flutter.minSdkVersion
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode
