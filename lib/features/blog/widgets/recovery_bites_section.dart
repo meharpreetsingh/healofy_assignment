@@ -18,7 +18,7 @@ class RecoveryBitesSection extends StatelessWidget {
           Text(
             "Postpartum Recovery Bites",
             style: GoogleFonts.poppins(
-              fontSize: 16.sp,
+              fontSize: 14.sp,
               fontWeight: FontWeight.w600,
               color: Theme.of(context).colorScheme.secondary,
             ),

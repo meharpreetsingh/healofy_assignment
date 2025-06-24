@@ -15,11 +15,12 @@ import 'package:vector_graphics/vector_graphics.dart' as _vg;
 class Assets {
   const Assets._();
 
+  static const AssetGenImage breastfeedingMother = AssetGenImage('assets/breastfeeding_mother.jpg');
   static const SvgGenImage gmpLogo = SvgGenImage('assets/gmp_logo.svg');
   static const AssetGenImage logoFssaiWhite = AssetGenImage('assets/logo_fssai_white.png');
 
   /// List of all assets
-  static List<dynamic> get values => [gmpLogo, logoFssaiWhite];
+  static List<dynamic> get values => [breastfeedingMother, gmpLogo, logoFssaiWhite];
 }
 
 class AssetGenImage {
