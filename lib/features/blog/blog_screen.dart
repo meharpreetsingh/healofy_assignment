@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:healofy_assignment/features/blog/widgets/looping_video_player.dart';
+
 import 'package:healofy_assignment/features/blog/widgets/recommended_diet_section.dart';
 import 'package:healofy_assignment/features/blog/widgets/title_section.dart';
 
@@ -39,6 +40,7 @@ class BlogScreen extends StatelessWidget {
           ),
 
           20.verticalSpace,
+
           const RecommendedDietSection(),
           const Text("Postpartum Nutrition Importance Section"),
           const Text("Ignoring Postpartum Nutrition Section"),
