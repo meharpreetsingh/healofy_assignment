@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:healofy_assignment/features/blog/widgets/looping_video_player.dart';
 
 import 'package:healofy_assignment/features/blog/widgets/recommended_diet_section.dart';
+import 'package:healofy_assignment/features/blog/widgets/recovery_bites_section.dart';
 import 'package:healofy_assignment/features/blog/widgets/title_section.dart';
 
 class BlogScreen extends StatelessWidget {
@@ -34,13 +35,13 @@ class BlogScreen extends StatelessWidget {
             ),
           ),
           10.verticalSpace,
+          // TITLE SECTION
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 16.w),
             child: const TitleSection(),
           ),
-
           20.verticalSpace,
-
+          // RECOMMENDED DIET SECTION
           const RecommendedDietSection(),
           const Text("Postpartum Nutrition Importance Section"),
           const Text("Ignoring Postpartum Nutrition Section"),
@@ -50,7 +51,8 @@ class BlogScreen extends StatelessWidget {
           const Text("Postpartum Diet Essential Section"),
           const Text("Introducing Healofy Postpartum Recovery Bits Section"),
           const Text("Key Nutrients & Benefits Section"),
-          const Text("Postpartum Recovery Bits Section"),
+          // RECOVERY BITES SECTION
+          const RecoveryBitesSection(),
           const Text("Astonishing Results Section"),
           const Text("Reviews Section"),
         ],
