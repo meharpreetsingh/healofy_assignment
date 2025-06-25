@@ -43,7 +43,7 @@ class CapSingle extends StatelessWidget {
               margin: EdgeInsets.symmetric(horizontal: 16.w),
               clipBehavior: Clip.hardEdge,
               decoration: BoxDecoration(borderRadius: BorderRadius.circular(12.r)),
-              child: HVideoPlayer(videoUrl: item.url, height: 250.h, width: 200.w),
+              child: HVideoPlayer(videoUrl: item.url),
             ),
         ],
       ),

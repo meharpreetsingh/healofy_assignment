@@ -4,12 +4,13 @@ import 'package:shimmer_animation/shimmer_animation.dart';
 import 'package:video_player/video_player.dart';
 
 class HVideoPlayer extends StatefulWidget {
-  const HVideoPlayer({super.key, required this.videoUrl, this.thumbnail, this.height, this.width});
+  const HVideoPlayer({super.key, required this.videoUrl, this.thumbnail, this.height, this.width, this.autoPlay = true});
 
   final String videoUrl;
   final String? thumbnail;
   final double? height;
   final double? width;
+  final bool autoPlay;
 
   @override
   State<HVideoPlayer> createState() => _HVideoPlayerState();
@@ -21,12 +22,17 @@ class _HVideoPlayerState extends State<HVideoPlayer> {
   @override
   void initState() {
     super.initState();
-    _controller = VideoPlayerController.networkUrl(Uri.parse(widget.videoUrl))
-      ..setLooping(true)
-      ..initialize().then((_) {
-        setState(() {});
-        _controller.play();
-      });
+    _controller =
+        VideoPlayerController.networkUrl(
+            Uri.parse(widget.videoUrl),
+            viewType: VideoViewType.platformView,
+            videoPlayerOptions: VideoPlayerOptions(allowBackgroundPlayback: true, mixWithOthers: true),
+          )
+          ..setLooping(true)
+          ..initialize().then((_) {
+            setState(() {});
+            if (widget.autoPlay) _controller.play();
+          });
   }
 
   @override
@@ -47,6 +53,22 @@ class _HVideoPlayerState extends State<HVideoPlayer> {
         placeholder: (context, url) => Shimmer(child: Container(color: Colors.grey.shade300)),
       );
     }
-    return AspectRatio(aspectRatio: _controller.value.aspectRatio, child: VideoPlayer(_controller));
+    return GestureDetector(
+      onTap: () {
+        if (!_controller.value.isPlaying) {
+          _controller.play();
+        } else {
+          _controller.pause();
+        }
+      },
+      child: SizedBox(
+        height: widget.height ?? 250,
+        width: widget.width ?? double.infinity,
+        child: ColoredBox(
+          color: Colors.transparent,
+          child: AspectRatio(aspectRatio: _controller.value.aspectRatio, child: VideoPlayer(_controller)),
+        ),
+      ),
+    );
   }
 }

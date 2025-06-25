@@ -4,7 +4,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:healofy_assignment/features/article/models/article_res.dart';
 import 'package:healofy_assignment/features/article/widgets/h_video_player.dart';
 import 'package:healofy_assignment/features/blog/widgets/section_heading.dart';
-import 'package:healofy_assignment/features/blog/widgets/section_subtitle.dart';
 
 class VideoReviews extends StatelessWidget {
   const VideoReviews({super.key, required this.item, this.backgroundColor});
@@ -25,35 +24,31 @@ class VideoReviews extends StatelessWidget {
             padding: EdgeInsets.symmetric(horizontal: 16.w),
             child: SectionHeading(text: item.title),
           ),
-          if (item.subTitle.isNotEmpty)
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 16.w),
-              child: SectionSubtitle(text: item.subTitle),
-            ),
           10.verticalSpace,
           SizedBox(
-            height: 250.h,
+            height: 350.h,
             child: ListView.separated(
               shrinkWrap: true,
               padding: EdgeInsets.symmetric(horizontal: 16.w),
               scrollDirection: Axis.horizontal,
               itemBuilder: (context, index) {
-                final content = item.contents[index];
+                final content = item.videoReviews[index];
                 if (content.mediaType == "IMAGE") {
                   return CachedNetworkImage(imageUrl: content.url, fit: BoxFit.contain);
                 }
                 if (content.mediaType == "VIDEO") {
                   return Container(
                     width: 200.w,
+                    height: 350.h,
                     clipBehavior: Clip.hardEdge,
                     decoration: BoxDecoration(borderRadius: BorderRadius.circular(8.r)),
-                    child: HVideoPlayer(videoUrl: content.url, height: 250.h, width: 200.w),
+                    child: HVideoPlayer(videoUrl: content.url, height: 250.h, width: 200.w, autoPlay: false),
                   );
                 }
-                return null;
+                return const SizedBox.shrink();
               },
               separatorBuilder: (context, index) => 10.horizontalSpace,
-              itemCount: item.contents.length,
+              itemCount: item.videoReviews.length,
             ),
           ),
         ],
