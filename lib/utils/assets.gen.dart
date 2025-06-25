@@ -17,10 +17,11 @@ class Assets {
 
   static const AssetGenImage breastfeedingMother = AssetGenImage('assets/breastfeeding_mother.jpg');
   static const SvgGenImage gmpLogo = SvgGenImage('assets/gmp_logo.svg');
+  static const AssetGenImage herb = AssetGenImage('assets/herb.jpg');
   static const AssetGenImage logoFssaiWhite = AssetGenImage('assets/logo_fssai_white.png');
 
   /// List of all assets
-  static List<dynamic> get values => [breastfeedingMother, gmpLogo, logoFssaiWhite];
+  static List<dynamic> get values => [breastfeedingMother, gmpLogo, herb, logoFssaiWhite];
 }
 
 class AssetGenImage {

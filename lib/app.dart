@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:healofy_assignment/features/blog/blog_screen.dart';
+import 'package:healofy_assignment/features/article/article_screen.dart';
 import 'package:healofy_assignment/utils/app_theme.dart';
 
 class MainApp extends StatelessWidget {
@@ -13,7 +13,7 @@ class MainApp extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (context, child) => MaterialApp(title: "Healofy Assignment", theme: AppThemes.light(context), home: child),
-      child: const BlogScreen(),
+      child: const ArticleScreen(),
     );
   }
 }

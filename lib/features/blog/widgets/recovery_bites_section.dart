@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:healofy_assignment/features/blog/widgets/looping_video_player.dart';
-import 'package:healofy_assignment/utils/app_colors.dart';
+import 'package:healofy_assignment/features/blog/widgets/section_heading.dart';
+import 'package:healofy_assignment/features/blog/widgets/section_subtitle.dart';
 
 class RecoveryBitesSection extends StatelessWidget {
   const RecoveryBitesSection({super.key});
@@ -15,15 +15,8 @@ class RecoveryBitesSection extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          Text(
-            "Postpartum Recovery Bites",
-            style: GoogleFonts.poppins(
-              fontSize: 14.sp,
-              fontWeight: FontWeight.w600,
-              color: Theme.of(context).colorScheme.secondary,
-            ),
-          ),
-          const Text("Works To Boost Recovery Immunity & Baby's Brain", style: TextStyle(color: AppColors.subTitle)),
+          const SectionHeading(text: "Postpartum Recovery Bites"),
+          const SectionSubtitle(text: "Works To Boost Recovery Immunity & Baby's Brain"),
           14.verticalSpace,
           Container(
             height: 200.h,
@@ -38,5 +31,3 @@ class RecoveryBitesSection extends StatelessWidget {
     );
   }
 }
-
-// https://d2aeb2wamokgyu.cloudfront.net/Thejus/PDP-20240611T141024Z-001/PDP/71.mp4

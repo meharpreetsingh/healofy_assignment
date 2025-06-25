@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:healofy_assignment/features/blog/widgets/breastmilk_supply_section.dart';
 import 'package:healofy_assignment/features/blog/widgets/looping_video_player.dart';
+import 'package:healofy_assignment/features/blog/widgets/proven_hearbs_section.dart';
 
 import 'package:healofy_assignment/features/blog/widgets/recommended_diet_section.dart';
 import 'package:healofy_assignment/features/blog/widgets/recovery_bites_section.dart';
@@ -48,7 +49,7 @@ class BlogScreen extends StatelessWidget {
           const Text("Ignoring Postpartum Nutrition Section"),
           const Text("Crutial Nutritions & Their Sources Section"),
           const BreastmilkSupplySection(),
-          const Text("Proven Herbs & Spices Section"),
+          const ProvenHearbsSection(),
           const Text("Postpartum Diet Essential Section"),
           const Text("Introducing Healofy Postpartum Recovery Bits Section"),
           const Text("Key Nutrients & Benefits Section"),
