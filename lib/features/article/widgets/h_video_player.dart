@@ -37,7 +37,6 @@ class _HVideoPlayerState extends State<HVideoPlayer> {
 
   @override
   Widget build(BuildContext context) {
-    // TODO Improve this logic to handle errors and loading states better
     if ((_controller.value.isBuffering || _controller.value.hasError || !_controller.value.isInitialized) &&
         widget.thumbnail != null) {
       return CachedNetworkImage(
