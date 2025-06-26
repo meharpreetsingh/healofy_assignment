@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:healofy_assignment/features/article/article_screen.dart';
+import 'package:healofy_assignment/features/blog/blog_screen.dart';
 import 'package:healofy_assignment/utils/app_theme.dart';
 
 class MainApp extends StatelessWidget {
